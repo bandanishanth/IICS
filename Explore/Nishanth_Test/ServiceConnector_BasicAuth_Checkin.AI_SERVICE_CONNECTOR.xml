@@ -1,0 +1,64 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>xx8AyNnQMMnGbci-gt-17092844-2023-11-07T10:36:30.379Z::svc.xml</types1:EntryId>
+      <types1:Name>ServiceConnector_BasicAuth_Checkin</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>bandanishanth</types1:CreatedBy>
+      <types1:CreationDate>2023-11-07T10:36:30Z</types1:CreationDate>
+      <types1:ModifiedBy>bandanishanth</types1:ModifiedBy>
+      <types1:ModificationDate>2023-11-08T12:28:37Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="ServiceConnector_BasicAuth_Checkin"
+                            label=""
+                            name="ServiceConnector_BasicAuth_Checkin"
+                            uuid="dc84d2af-21d8-41bd-a293-51c51c4cefcc">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="Test"
+                       maxRedirects="100"
+                       name="Test"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="https://google.com" verb="GET">
+                        <authentication>
+                           <username>ABC</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>1iLx2t5MreWfKsei5phROa</types1:GUID>
+      <types1:DisplayName>ServiceConnector_BasicAuth_Checkin</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-11-08T12:31:49.287Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "1iLx2t5MreWfKsei5phROa",
+    "name" : "ServiceConnector_BasicAuth_Checkin",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "xx8AyNnQMMnGbci-gt-17092844-2023-11-07T10:36:30.379Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-11-08T12:31:49.527Z",
+  "objectRefs" : [ ]
+}
