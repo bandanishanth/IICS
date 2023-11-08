@@ -13,7 +13,7 @@
       <types1:CreatedBy>bandanishanth</types1:CreatedBy>
       <types1:CreationDate>2023-11-07T10:36:30Z</types1:CreationDate>
       <types1:ModifiedBy>bandanishanth</types1:ModifiedBy>
-      <types1:ModificationDate>2023-11-08T12:28:37Z</types1:ModificationDate>
+      <types1:ModificationDate>2023-11-08T12:50:44Z</types1:ModificationDate>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
@@ -26,7 +26,22 @@
                             uuid="dc84d2af-21d8-41bd-a293-51c51c4cefcc">
             <description/>
             <tags/>
-            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    label="username"
+                                    masked="true"
+                                    name="username"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    label="password"
+                                    masked="true"
+                                    name="password"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
             <actions>
                <action category=""
                        failOnError="true"
@@ -39,11 +54,13 @@
                   <description/>
                   <input/>
                   <binding>
-                     <restSimpleBinding multiUsing="semicolonSeparated" url="https://google.com" verb="GET">
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://endsii03oc2bl.x.pipedream.net"
+                                        verb="GET">
                         <authentication>
-                           <username>ABC</username>
-                           <password/>
-                           <isExpressionInPassword>false</isExpressionInPassword>
+                           <username>{$username}</username>
+                           <password>{$password}</password>
+                           <isExpressionInPassword>true</isExpressionInPassword>
                         </authentication>
                         <mutualAuth enabled="false">
                            <keyStore mode="file"/>
@@ -60,5 +77,5 @@
       <types1:GUID>1iLx2t5MreWfKsei5phROa</types1:GUID>
       <types1:DisplayName>ServiceConnector_BasicAuth_Checkin</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-11-08T12:34:36.659Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-11-08T12:51:38.291Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
