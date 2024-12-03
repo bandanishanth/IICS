@@ -16,14 +16,14 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
+        "description" : "A",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-12-03T09:58:38.265Z",
+  "updateTime" : "2024-12-03T10:00:43.830Z",
   "objectRefs" : [ {
     "id" : "ajHCvDTCbyqdCXKECocx8y",
     "name" : "KafkaConnectionCollab",
