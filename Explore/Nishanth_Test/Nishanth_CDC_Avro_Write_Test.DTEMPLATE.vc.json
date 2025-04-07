@@ -1,0 +1,479 @@
+{
+  "content" : {
+    "description" : "AAA",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Nishanth_CDC_Avro_Write_Test",
+    "links" : [
+      {
+        "link" : "Java -> Target"
+      },
+      {
+        "link" : "Source -> Java"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2025-02-10T10:13:11.684Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "File Reader Truncate String Null",
+            "value" : "NO"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "ActifBusinessId"
+            },
+            "name" : "ActifBusinessId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ActifVersion"
+            },
+            "name" : "ActifVersion",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "key"
+            },
+            "name" : "key",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@9Ydw2qbcUohjOtcOZDLVKM",
+          "connectionName" : "Nishanth_VM_Linux_Flat_File",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "CDC_MDM_Input.csv",
+            "label" : "CDC_MDM_Input.csv",
+            "objectName" : "CDC_MDM_Input.csv",
+            "path" : "CDC_MDM_Input.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "ActifBusinessId",
+                "fieldType" : "CONNECTOR",
+                "label" : "ActifBusinessId",
+                "nativeName" : "ActifBusinessId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "CDC_MDM_Input.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "ActifVersion",
+                "fieldType" : "CONNECTOR",
+                "label" : "ActifVersion",
+                "nativeName" : "ActifVersion",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "CDC_MDM_Input.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "key",
+                "fieldType" : "CONNECTOR",
+                "label" : "key",
+                "nativeName" : "key",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "CDC_MDM_Input.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-02-10T10:13:11.686Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "partitionId"
+            },
+            "name" : "partitionId",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "key"
+            },
+            "name" : "key",
+            "platformType" : {
+              "name" : "binary"
+            },
+            "precision" : 65535,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TopicName"
+            },
+            "name" : "TopicName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ActifBusinessId"
+            },
+            "name" : "ActifBusinessId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ActifVersion"
+            },
+            "name" : "ActifVersion",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 4000,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@9u5DHXaGeMVi3cmimIRpkr",
+          "connectionName" : "Nishanth_VM_Linux_Confluent_Kafka_OnPrem_SchemaRegistry",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "dataFormat" : {
+            "formatId" : "Avro",
+            "validateHSchema" : "false"
+          },
+          "object" : {
+            "name" : "Topics/CDC_Payload",
+            "label" : "Topics/CDC_Payload",
+            "objectName" : "CDC_Payload",
+            "objectType" : "topic",
+            "path" : "Topics/CDC_Payload",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "partitionId",
+                "fieldType" : "CONNECTOR",
+                "label" : "partitionId",
+                "nativeName" : "partitionId",
+                "nativeType" : "integer",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "CDC_Payload"
+                  }
+                ]
+              },
+              {
+                "name" : "key",
+                "fieldType" : "CONNECTOR",
+                "label" : "key",
+                "nativeName" : "key",
+                "nativeType" : "raw",
+                "original" : "false",
+                "precision" : 65535,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "CDC_Payload"
+                  }
+                ]
+              },
+              {
+                "name" : "TopicName",
+                "fieldType" : "CONNECTOR",
+                "label" : "TopicName",
+                "nativeName" : "TopicName",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "CDC_Payload"
+                  }
+                ]
+              },
+              {
+                "name" : "ActifBusinessId",
+                "fieldType" : "PARSER",
+                "label" : "ActifBusinessId",
+                "nativeName" : "ActifBusinessId",
+                "nativeType" : "avro_string",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "CDC_Payload"
+                  }
+                ]
+              },
+              {
+                "name" : "ActifVersion",
+                "fieldType" : "PARSER",
+                "label" : "ActifVersion",
+                "nativeName" : "ActifVersion",
+                "nativeType" : "avro_string",
+                "original" : "false",
+                "precision" : 4000,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "CDC_Payload"
+                  }
+                ]
+              }
+            ]
+          },
+          "runtimeAttributes" : {
+            "attributes" : [
+              {
+                "name" : "Metadata Fetch Timeout in milliseconds",
+                "value" : "10000"
+              },
+              {
+                "name" : "Batch Flush Time in milliseconds",
+                "value" : "1000"
+              },
+              {
+                "name" : "Batch Flush Size in bytes",
+                "value" : "16384"
+              },
+              {
+                "name" : "Producer Configuration Properties",
+                "value" : "auto.register.schemas=false"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "ActifBusinessId",
+              "toField" : {
+                "name" : "ActifBusinessId"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "ActifVersion",
+              "toField" : {
+                "name" : "ActifVersion"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "key_binary",
+              "toField" : {
+                "name" : "key"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2025-02-10T10:19:30.316Z",
+        "name" : "Java",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "helperCodeSnippet" : "// TODO: Declare static and non-static partition-level variables and functions here.\n// For example,\n//\n// static int countNullRows;   // Counts the number of output rows across all partitions that contains null values.\n// int partCountNullRows;      // Counts the number of output rows in this partition that contains null values.\n//\n// static Object lock = new Object();   // Lock to synchronize countNullRows.\n\n",
+        "importPackagesSnippet" : "// TODO: Enter the Java packages to be imported here.\n// For example, if you want to use Hashtable in any of the snippets, import it as shown below:\n//\n// import java.util.Hashtable;\nimport java.nio.charset.StandardCharsets;\n",
+        "lastCompilationFailed" : "false",
+        "onEndOfDataMethodSnippet" : "// TODO: Enter the code that executes after the transformation receives all of the input data here.\n//\n// logInfo(\"The number of null rows for this partition is: \" + partCountNullRows);\n// synchronized(lock)\n// {\n//\t\tlogInfo(\"The total number of null rows across partitions until now is: \" +  countNullRows);\n// }\n",
+        "onInputRowMethodSnippet" : "// TODO: Enter the code to process an input row here.\n// You can access input column data by referencing the input column name.\n// You can set output column data by referencing the output column name.\n// For example, if\n// input1 and input2 are input fields of type int, and\n// output1 and output2 are output fields of type int,\n// then the transformation logic might be as follows:\n//\n// if(!isNull(\"input1\") && !isNull(\"input1\"))\n// {\n//\t\toutput1 = input1 + input2;\n//\t\toutput2 = input1 - input2;\n// }\n// else\n// {\n//\t\tsetNull(\"output1\");\n//\t\tsetNull(\"output2\");\n//\t\tpartCountNullRows++;\n//\t\tsynchronized(lock)\n//\t\t{\n//\t\t\tcountNullRows++;\n//\t\t}\n// }\nkey_binary=key.getBytes(StandardCharsets.UTF_8);\ngenerateRow();\n",
+        "onTransactionMethodSnippet" : "// TODO: Enter the code that executes when the transformation receives a transaction here.\n",
+        "runtimeEnvId" : "0116DX25000000000005",
+        "sorterModeJava" : "SIMPLE",
+        "unmodifiedCompilation" : "true",
+        "compiledInputFields" : [
+          {
+            "name" : "ActifBusinessId",
+            "precision" : 255,
+            "scale" : 0,
+            "type" : "string"
+          },
+          {
+            "name" : "ActifVersion",
+            "precision" : 255,
+            "scale" : 0,
+            "type" : "string"
+          },
+          {
+            "name" : "key",
+            "precision" : 255,
+            "scale" : 0,
+            "type" : "string"
+          }
+        ],
+        "outputFields" : [
+          {
+            "name" : "key_binary",
+            "platformType" : {
+              "name" : "binary"
+            },
+            "precision" : 5000,
+            "scale" : 0
+          }
+        ]
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-07 18:23:48 IST"
+}
