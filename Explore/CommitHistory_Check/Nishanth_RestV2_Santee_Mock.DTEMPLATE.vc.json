@@ -1,0 +1,1030 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Nishanth_RestV2_Santee_Mock",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Source -> Target"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2025-08-11T12:54:49.768Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "responseXmlSize",
+            "value" : "1024"
+          },
+          {
+            "name" : "performanceMode",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "Response_200",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@7fcEk7UwrLiekdD4aF8Aww",
+          "connectionName" : "Nishanth_VM_Linux_RestV2_Santee_Mock",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "OPERATION",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "Export_GetPerformance",
+            "label" : "Export_GetPerformance",
+            "objectName" : "Export_GetPerformance",
+            "path" : "Export_GetPerformance",
+            "retainMetadata" : "false"
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false",
+            "requestXml" : "{\n  \"UnitCode\" : 351,\n  \"PerfYear\" : 2025,\n  \"PerfMonth\" : 1,\n  \"UtilCode\" : 320\n}"
+          }
+        },
+        "xFieldMap" : {
+          "denormalized" : "false",
+          "mappings" : [
+            {
+              "groupName" : "Response_200",
+              "isRoot" : "false",
+              "xPath" : "/json:root/json:Response_200Array/json:Response_200",
+              "xfields" : [
+                {
+                  "name" : "UtilCode",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:UtilCode"
+                },
+                {
+                  "name" : "UnitCode",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:UnitCode"
+                },
+                {
+                  "name" : "PerfYear",
+                  "platformType" : {
+                    "name" : "integer"
+                  },
+                  "precision" : 10,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PerfYear"
+                },
+                {
+                  "name" : "PerfMonth",
+                  "platformType" : {
+                    "name" : "integer"
+                  },
+                  "precision" : 10,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PerfMonth"
+                },
+                {
+                  "name" : "PerfRev",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PerfRev"
+                },
+                {
+                  "name" : "GAG",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:GAG"
+                },
+                {
+                  "name" : "NAG",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:NAG"
+                },
+                {
+                  "name" : "UnitLoading",
+                  "platformType" : {
+                    "name" : "integer"
+                  },
+                  "precision" : 10,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:UnitLoading"
+                },
+                {
+                  "name" : "AttemptedStarts",
+                  "platformType" : {
+                    "name" : "integer"
+                  },
+                  "precision" : 10,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:AttemptedStarts"
+                },
+                {
+                  "name" : "ActualStarts",
+                  "platformType" : {
+                    "name" : "integer"
+                  },
+                  "precision" : 10,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:ActualStarts"
+                },
+                {
+                  "name" : "Description",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:Description"
+                },
+                {
+                  "name" : "SH",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SH"
+                },
+                {
+                  "name" : "PO",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PO"
+                },
+                {
+                  "name" : "RS",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:RS"
+                },
+                {
+                  "name" : "FO",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:FO"
+                },
+                {
+                  "name" : "PumpH",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PumpH"
+                },
+                {
+                  "name" : "MO",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:MO"
+                },
+                {
+                  "name" : "SCH",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SCH"
+                },
+                {
+                  "name" : "SE",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SE"
+                },
+                {
+                  "name" : "AH",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:AH"
+                },
+                {
+                  "name" : "UH",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:UH"
+                },
+                {
+                  "name" : "PH",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PH"
+                },
+                {
+                  "name" : "PriFuel",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriFuel"
+                },
+                {
+                  "name" : "SecFuel",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecFuel"
+                },
+                {
+                  "name" : "TerFuel",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerFuel"
+                },
+                {
+                  "name" : "QuatFuel",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatFuel"
+                },
+                {
+                  "name" : "PriBurn",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriBurn"
+                },
+                {
+                  "name" : "SecBurn",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecBurn"
+                },
+                {
+                  "name" : "TerBurn",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerBurn"
+                },
+                {
+                  "name" : "QuatBurn",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatBurn"
+                },
+                {
+                  "name" : "PriHeat",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriHeat"
+                },
+                {
+                  "name" : "SecHeat",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecHeat"
+                },
+                {
+                  "name" : "TerHeat",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerHeat"
+                },
+                {
+                  "name" : "QuatHeat",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatHeat"
+                },
+                {
+                  "name" : "PriAsh",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriAsh"
+                },
+                {
+                  "name" : "SecAsh",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecAsh"
+                },
+                {
+                  "name" : "TerAsh",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerAsh"
+                },
+                {
+                  "name" : "QuatAsh",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatAsh"
+                },
+                {
+                  "name" : "PriMoisture",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriMoisture"
+                },
+                {
+                  "name" : "SecMoisture",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecMoisture"
+                },
+                {
+                  "name" : "TerMoisture",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerMoisture"
+                },
+                {
+                  "name" : "QuatMoisture",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatMoisture"
+                },
+                {
+                  "name" : "PriSulfur",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriSulfur"
+                },
+                {
+                  "name" : "SecSulfur",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecSulfur"
+                },
+                {
+                  "name" : "TerSulfur",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerSulfur"
+                },
+                {
+                  "name" : "QuatSulfur",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatSulfur"
+                },
+                {
+                  "name" : "PriAlk",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriAlk"
+                },
+                {
+                  "name" : "SecAlk",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecAlk"
+                },
+                {
+                  "name" : "TerAlk",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerAlk"
+                },
+                {
+                  "name" : "QuatAlk",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatAlk"
+                },
+                {
+                  "name" : "PriVanad",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriVanad"
+                },
+                {
+                  "name" : "SecVanad",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecVanad"
+                },
+                {
+                  "name" : "TerVanad",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerVanad"
+                },
+                {
+                  "name" : "QuatVanad",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatVanad"
+                },
+                {
+                  "name" : "PriSoft",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:PriSoft"
+                },
+                {
+                  "name" : "SecSoft",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:SecSoft"
+                },
+                {
+                  "name" : "TerSoft",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:TerSoft"
+                },
+                {
+                  "name" : "QuatSoft",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:QuatSoft"
+                },
+                {
+                  "name" : "JGMC",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:JGMC"
+                },
+                {
+                  "name" : "JNMC",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:JNMC"
+                },
+                {
+                  "name" : "JGAG",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:JGAG"
+                },
+                {
+                  "name" : "JNAG",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:JNAG"
+                },
+                {
+                  "name" : "JPriBurn",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:JPriBurn"
+                },
+                {
+                  "name" : "JSecBurn",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:JSecBurn"
+                },
+                {
+                  "name" : "JTerBurn",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:JTerBurn"
+                },
+                {
+                  "name" : "JQuatBurn",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:JQuatBurn"
+                },
+                {
+                  "name" : "perfComment",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:perfComment"
+                },
+                {
+                  "name" : "perfReady",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:perfReady"
+                },
+                {
+                  "name" : "IH",
+                  "platformType" : {
+                    "name" : "double"
+                  },
+                  "precision" : 15,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:IH"
+                },
+                {
+                  "name" : "MeasureType",
+                  "platformType" : {
+                    "name" : "integer"
+                  },
+                  "precision" : 10,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:MeasureType"
+                },
+                {
+                  "name" : "CreatedBy",
+                  "platformType" : {
+                    "name" : "integer"
+                  },
+                  "precision" : 10,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:CreatedBy"
+                },
+                {
+                  "name" : "CreationDate",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:CreationDate"
+                },
+                {
+                  "name" : "ModifiedBy",
+                  "platformType" : {
+                    "name" : "integer"
+                  },
+                  "precision" : 10,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:ModifiedBy"
+                },
+                {
+                  "name" : "UpdateDate",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:UpdateDate"
+                },
+                {
+                  "name" : "CreatedPeriod",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:CreatedPeriod"
+                },
+                {
+                  "name" : "ModifiedPeriod",
+                  "platformType" : {
+                    "name" : "string"
+                  },
+                  "precision" : 255,
+                  "scale" : 0,
+                  "foreignKey" : "false",
+                  "primaryKey" : "false",
+                  "xPath" : "/json:root/json:Response_200Array/json:Response_200/json:ModifiedPeriod"
+                }
+              ]
+            }
+          ],
+          "packed" : {
+            "packedFields" : null
+          }
+        }
+      },
+      {
+        "createTime" : "2025-08-11T12:54:49.768Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Create Target Directory",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@9Ydw2qbcUohjOtcOZDLVKM",
+          "connectionName" : "Nishanth_VM_Linux_Flat_File",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "RestV2_Santee.csv",
+            "label" : "RestV2_Santee.csv",
+            "path" : "RestV2_Santee.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-20 19:50:17 IST"
+}
